@@ -1,8 +1,8 @@
 version: "3.7"
 services:
         database:
-                image: 127.0.0.1:5000/db
-                build: .
+                image: mihsana/db
+                build: ./db
                 environment:
     
                        
@@ -15,8 +15,8 @@ services:
 
                           
         flask-app:
-                image: 127.0.0.1:5000/flask-app
-                build: .
+                image: mihsana/flask-app
+                build: ./flask-app
                 ports:
                         - target: 5000
                           published: 5000
